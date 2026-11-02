@@ -21,6 +21,17 @@ class QueryRequest(BaseModel):
     question: str
 
 
+@app.get("/")
+def root() -> dict:
+    return {
+        "status": "ok",
+        "app": settings.app_name,
+        "docs": "/docs",
+        "health": "/health",
+        "api": ["/api/ingest", "/api/evaluation", "/api/documents", "/api/query"],
+    }
+
+
 @app.get("/health")
 def health() -> dict:
     return {"status": "ok", "app": settings.app_name}

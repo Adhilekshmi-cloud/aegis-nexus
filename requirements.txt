@@ -12,8 +12,6 @@ beautifulsoup4==4.13.4
 pandas==2.2.3
 pillow==11.0.0
 pytesseract==0.3.13
-sentence-transformers==4.1.0
-faiss-cpu==1.11.0
 numpy==2.2.0
 pytest==8.3.5
 httpx==0.28.1
