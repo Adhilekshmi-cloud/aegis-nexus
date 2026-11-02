@@ -34,7 +34,7 @@ If the Render service's **Root Directory** is set to `backend`, use:
 - Build command: `pip install -r requirements.txt`
 - Start command: `python -m uvicorn app.main:app --host 0.0.0.0 --port $PORT`
 
-`backend/requirements.txt` includes the shared root dependency list, so this build command works from Render's backend root directory.
+The repository's `.python-version` pins Render to Python 3.13.4, which is compatible with the pinned FAISS and other native dependencies. `backend/requirements.txt` includes the shared root dependency list, so this build command works from Render's backend root directory.
 
 ## Evidence model
 The system preserves source provenance and distinguishes between verified facts, conflicting facts, version-scoped facts, inferred relationships, and information that could not be determined from the available evidence.
