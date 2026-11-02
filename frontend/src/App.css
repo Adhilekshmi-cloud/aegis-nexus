@@ -1,0 +1,29 @@
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  padding: 0.25rem 0.65rem;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.status-pill--verified {
+  border-color: rgba(52, 211, 153, 0.3);
+  background: rgba(52, 211, 153, 0.1);
+  color: rgb(110, 231, 183);
+}
+
+.status-pill--version-dependent {
+  border-color: rgba(251, 191, 36, 0.3);
+  background: rgba(251, 191, 36, 0.12);
+  color: rgb(252, 211, 77);
+}
+
+.status-pill--cannot-determine {
+  border-color: rgba(251, 113, 133, 0.3);
+  background: rgba(251, 113, 133, 0.08);
+  color: rgb(253, 164, 175);
+}
