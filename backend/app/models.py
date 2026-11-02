@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Float, ForeignKey, Integer, String, Text
 from sqlalchemy.orm import relationship
 
-from backend.app.db import Base
+from .db import Base
 
 
 class Document(Base):

@@ -14,11 +14,18 @@ This project delivers a production-style evidence-grounded knowledge ingestion a
 1. Install Python dependencies:
    python -m pip install -r requirements.txt
 2. Start the API:
-   uvicorn backend.app.main:app --reload --host 0.0.0.0 --port 8000
+   python -m uvicorn backend.app.main:app --reload --host 0.0.0.0 --port 8000
+   Or, from the `backend` directory:
+   python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 3. Start the frontend:
    cd frontend && npm install && npm run dev -- --host 0.0.0.0 --port 5173
 
 The project expects the source dataset under `./aegis-dataset` and the PDF question list at `./evaluation-questions.pdf`.
+
+For a deployment platform that provides a `PORT` environment variable, use this start command:
+`python -m uvicorn backend.app.main:app --host 0.0.0.0 --port $PORT`
+
+The backend uses package-relative imports and resolves the dataset and default SQLite database from the project root, so either local command works regardless of the current directory.
 
 ## Evidence model
 The system preserves source provenance and distinguishes between verified facts, conflicting facts, version-scoped facts, inferred relationships, and information that could not be determined from the available evidence.

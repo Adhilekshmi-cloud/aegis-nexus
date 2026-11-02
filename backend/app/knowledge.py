@@ -11,8 +11,8 @@ from PIL import Image
 from pptx import Presentation as PptxPresentation
 from sqlalchemy.orm import Session
 
-from backend.app.db import Base, engine, session_factory
-from backend.app.models import (
+from .db import Base, engine, session_factory
+from .models import (
     AliasResolution,
     Conflict,
     Document,

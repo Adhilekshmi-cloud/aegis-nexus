@@ -2,10 +2,10 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-from backend.app.config import settings
-from backend.app.db import session_factory
-from backend.app.knowledge import answer_evaluation_questions, ingest_dataset, _eval_answer_for
-from backend.app.models import Document
+from .config import settings
+from .db import session_factory
+from .knowledge import answer_evaluation_questions, ingest_dataset, _eval_answer_for
+from .models import Document
 
 app = FastAPI(title=settings.app_name)
 app.add_middleware(
