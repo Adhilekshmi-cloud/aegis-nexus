@@ -27,6 +27,15 @@ For a deployment platform that provides a `PORT` environment variable, use this 
 
 The backend uses package-relative imports and resolves the dataset and default SQLite database from the project root, so either local command works regardless of the current directory.
 
+### Render deployment
+
+If the Render service's **Root Directory** is set to `backend`, use:
+
+- Build command: `pip install -r requirements.txt`
+- Start command: `python -m uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+
+`backend/requirements.txt` includes the shared root dependency list, so this build command works from Render's backend root directory.
+
 ## Evidence model
 The system preserves source provenance and distinguishes between verified facts, conflicting facts, version-scoped facts, inferred relationships, and information that could not be determined from the available evidence.
 
